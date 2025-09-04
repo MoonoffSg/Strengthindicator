@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "strength_indicator",
+  "version": "${version}",
+  "name": "Strength indicator",
+  "description": "Just a small mod showing item durability next to hotbar",
+  "authors": [
+    "Moonoff_"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/strength_indicator/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.moonmod.strength_indicator.client.Strength_indicatorDataGenerator"
+    ],
+    "client": [
+      "net.moonmod.strength_indicator.client.Strength_indicatorClient"
+    ],
+    "main": [
+      "net.moonmod.strength_indicator.Strength_indicator"
+    ]
+  },
+  "mixins": [
+    "strength_indicator.mixins.json",
+    {
+      "config": "strength_indicator.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

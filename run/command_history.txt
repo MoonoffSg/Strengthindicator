@@ -1,0 +1,4 @@
+/tick step 100
+/tick unfreeze
+/gamerule doDaylightCycle true
+/gamerule doDaylightCycle false
